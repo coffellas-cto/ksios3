@@ -10,21 +10,21 @@
 
 @implementation GDUser
 
-- (NSString *)name {
-    if (_realName) {
-        return _realName;
-    }
-    
-    return _name;
-}
-
-- (void)setName:(NSString *)name {
-    self->_name = name;
-}
-
-- (void)setSecretName:(NSString *)secretName {
-    _realName = secretName;
-}
+//- (NSString *)name {
+////    if (_realName) {
+////        return _realName;
+////    }
+////    
+//    return _name;
+//}
+//
+//- (void)setName:(NSString *)name {
+//    self->_name = name;
+//}
+//
+//- (void)setSecretName:(NSString *)secretName {
+//    _realName = secretName;
+//}
 
 - (instancetype)init {
     return [self initWithID:0 andName:nil];
@@ -39,6 +39,7 @@
     if (self) {
         self.ID = ID;
         self.ageCategory = GDUserAgeCategoryOver55;
+        _name = name;
     }
     return self;
 }
@@ -50,6 +51,10 @@
 
 - (void)dealloc {
     // Dispose of objects
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"[%i] %@", self.ID, self.name];
 }
 
 @end

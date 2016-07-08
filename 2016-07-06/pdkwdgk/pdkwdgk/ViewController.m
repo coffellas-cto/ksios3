@@ -25,6 +25,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSMutableArray *a = [[NSMutableArray alloc] init];
+    
+    GDUser *u1 = [GDUser userWithID:23 andName:@"Alex"];
+    [a addObject:u1];
+    GDUser *u2 = [GDUser userWithID:294180 andName:@"Petya"];
+    [a addObject:u2];
+    NSLog(@"%@", a);
+    
+    return;
     // Do any additional setup after loading the view, typically from a nib.
     
     GDUser *user1 = [GDUser userWithID:1 andName:@"V. Pupkin"];
