@@ -1,8 +1,8 @@
 //
 //  main.m
-//  UIExample
+//  AutolayoutTest
 //
-//  Created by Alex on 7/8/16.
+//  Created by Alex on 7/11/16.
 //  Copyright © 2016 Alex. All rights reserved.
 //
 
